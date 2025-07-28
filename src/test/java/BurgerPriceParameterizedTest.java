@@ -41,7 +41,6 @@ public class BurgerPriceParameterizedTest {
 
     @Test
     public void testBurgerPriceWithDifferentData() {
-        // Мокаем булку и ингредиент
         var bun = mock(Bun.class);
         var ingredient = mock(Ingredient.class);
 

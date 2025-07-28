@@ -79,7 +79,6 @@ public class BurgerTest {
 
         String receipt = burger.getReceipt();
 
-        // Проверяем, что в чеке есть все ключевые части
         assertTrue(receipt.contains("Флюоресцентная булка R2-D3"));
         assertTrue(receipt.contains("Соус фирменный Space Sauce"));
         assertTrue(receipt.contains("Price:"));
