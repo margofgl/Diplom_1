@@ -1,7 +1,8 @@
 public class Ingredient {
-    private final IngredientType type;
-    private final String name;
-    private final float price;
+
+    public IngredientType type;
+    public String name;
+    public float price;
 
     public Ingredient(IngredientType type, String name, float price) {
         this.type = type;
@@ -9,15 +10,16 @@ public class Ingredient {
         this.price = price;
     }
 
-    public IngredientType getType() {
-        return type;
+    public float getPrice() {
+        return price;
     }
 
     public String getName() {
         return name;
     }
 
-    public float getPrice() {
-        return price;
+    public IngredientType getType() {
+        return type;
     }
+
 }

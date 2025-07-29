@@ -28,9 +28,9 @@ public class BurgerPriceParameterizedTest {
     @Parameterized.Parameters(name = "Булка: {0}, Ингредиент: {1} → Цена: {2}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {500f, 100f, 1100f},  // 500*2 + 100
-                {700f, 200f, 1600f},  // 700*2 + 200
-                {1000f, 0f, 2000f}    // 1000*2 + 0
+                {988f, 88f, 988 * 2 + 88f},     // Флюоресцентная булка + соус Space Sauce
+                {300f, 300f, 300 * 2 + 300f},   // Красная булка + мясо бессмертного моллюска
+                {200f, 0f, 200 * 2 + 0f}        // Белая булка + без начинки
         });
     }
 
@@ -41,8 +41,8 @@ public class BurgerPriceParameterizedTest {
 
     @Test
     public void testBurgerPriceWithDifferentData() {
-        var bun = mock(Bun.class);
-        var ingredient = mock(Ingredient.class);
+        Bun bun = mock(Bun.class);
+        Ingredient ingredient = mock(Ingredient.class);
 
         when(bun.getPrice()).thenReturn(bunPrice);
         when(ingredient.getPrice()).thenReturn(ingredientPrice);
